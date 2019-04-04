@@ -1,1 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
+
+h1 {
+  font-style: italic;
+  text-align: center;
+}
+
+.col-4 {
+  border: 1px solid black;
+  height: 100px;
+  width: 500px;
+}
+
+div.col-4:hover {
+  background-color: red;
+}
