@@ -13,37 +13,42 @@
     </head>
     <body>
 
-      <form id="sign-up">
-        <input type="text" name="credentials[email]" placeholder="Email">
-        <input type="text" name="credentials[password]" placeholder="Password">
-        <input type="text" name="credentials[password_confirmation]" placeholder="Password Confirmation" >
-        <input type="submit" value="Sign Up!">
-      </form>
+      <div class="sign-up-container">
+        <form id="sign-up">
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="text" name="credentials[password]" placeholder="Password">
+          <input type="text" name="credentials[password_confirmation]" placeholder="Password Confirmation" >
+          <input type="submit" value="Sign Up!">
+        </form>
+      </div>
 
-      <form id="sign-in">
-        <input type="text" name="credentials[email]" placeholder="Email">
-        <input type="text" name="credentials[password]" placeholder="Password">
-        <input type="submit" value="Sign In!">
-      </form>
+      <div class="sign-in-container">
+        <form id="sign-in">
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="text" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign In!">
+        </form>
+      </div>
+
 
 <!-- game board divs-->
 
       <h1>Tic-Tac-Toe</h1>
           <div class="container">
             <div class="row">
-              <div id="zero" class="col-4 box" data-id="0">0</div>
-              <div id="one" class="col-4 box" data-id="1">1</div>
-              <div id="two" class="col-4 box" data-id="2">2</div>
+              <div id="zero" class="col-4 box" data-id="0"></div>
+              <div id="one" class="col-4 box" data-id="1"></div>
+              <div id="two" class="col-4 box" data-id="2"></div>
             </div>
             <div class="row">
-              <div id="three" class="col-4 box" data-id="3">3</div>
-              <div id="four" class="col-4 box" data-id="4">4</div>
-              <div id="five" class="col-4 box" data-id="5">5</div>
+              <div id="three" class="col-4 box" data-id="3"></div>
+              <div id="four" class="col-4 box" data-id="4"></div>
+              <div id="five" class="col-4 box" data-id="5"></div>
             </div>
             <div class="row">
-              <div id="six" class="col-4 box" data-id="6">6</div>
-              <div id="seven" class="col-4 box" data-id="7">7</div>
-              <div id="eight" class="col-4 box" data-id="8">8</div>
+              <div id="six" class="col-4 box" data-id="6"></div>
+              <div id="seven" class="col-4 box" data-id="7"></div>
+              <div id="eight" class="col-4 box" data-id="8"></div>
             </div>
           </div>
 
