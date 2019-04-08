@@ -6,8 +6,12 @@ h1 {
   text-align: center;
 }
 
+div.box {
+  background: grey;
+}
+
 .col-4 {
-  border: 2px solid black;
+  border: 2px solid white;
   height: 100px;
   width: 500px;
 }

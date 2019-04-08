@@ -1,44 +1,44 @@
+'use strict'
+
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  console.log('sign up success ran with the data: ', data)
+  $('#message').text('Sign up success!')
   $('form').trigger('reset')
 }
 
 const signUpFailure = function (data) {
-  console.log('sign up failure ran with the data: ', data)
+  $('#message').text('sign up failure!')
   $('form').trigger('reset')
 }
 
 const signInSuccess = function (data) {
-  console.log('sign in success ran with the data: ', data)
+  $('#message')('Sign in success!')
   $('form').trigger('reset')
   store.user = data.user
 }
 
 const signInFailure = function (data) {
-  console.log('sign in failure ran with the data: ', data)
+  $('#message').text('Sign in failure!')
   $('form').trigger('reset')
 }
 
 const changePasswordSuccess = function (data) {
-  console.log('change password success: ', data)
+  $('#message')('Changed password success')
   $('form').trigger('reset')
   store.user = data.user
 }
 
 const changePasswordFailure = function (data) {
-  console.log('change password failure: ', data)
+  $('#message')('change password failure')
   $('form').trigger('reset')
 }
 
 const signOutSuccess = function () {
-  console.log('sign out success')
   $('form').trigger('reset')
 }
 
 const signOutFailure = function () {
-  console.log('sign out failure')
 }
 
 module.exports = {
