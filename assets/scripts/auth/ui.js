@@ -3,19 +3,23 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Sign up success!')
   $('form').trigger('reset')
+  $('#sign-up-display').text('New account created! Please sign in below.')
 }
 
 const signUpFailure = function (data) {
-  $('#message').text('sign up failure!')
   $('form').trigger('reset')
+  $('#sign-up-display').text('Something went wrong. Please try again.')
 }
 
 const signInSuccess = function (data) {
-  $('#message')('Sign in success!')
-  $('form').trigger('reset')
   store.user = data.user
+  $('.sign-up-sign-in-div').hide()
+  $('.container').hide()
+  $('.stats').show()
+  $('#change-password').show()
+  $('#change-password').hide()
+  $('#sign-out').show()
 }
 
 const signInFailure = function (data) {
@@ -24,13 +28,12 @@ const signInFailure = function (data) {
 }
 
 const changePasswordSuccess = function (data) {
-  $('#message')('Changed password success')
-  $('form').trigger('reset')
+  $('#message').text('Changed password success')
   store.user = data.user
 }
 
 const changePasswordFailure = function (data) {
-  $('#message')('change password failure')
+  $('#message').text('change password failure')
   $('form').trigger('reset')
 }
 

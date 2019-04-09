@@ -32,7 +32,6 @@
 
 <form id="create">
     <input type="submit" value="New Game">
-    <input type="submit" value="Statistics">
 </form>
 
 <!-- game board divs-->
@@ -55,6 +54,12 @@
               <div id="eight" class="col-4 box" data-id="8"></div>
             </div>
           </div>
+
+          <!--STATISTICS-->
+      <div class="stats">
+        <button class="col-12 btn btn-dark" id="getGames">Show Stats</button>
+        <p id="stats-display"></p>
+      </div>
 
           <form id="change-password">
             <input type="password" name="passwords[old]" placeholder="old password">

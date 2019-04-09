@@ -102,9 +102,16 @@ const newGame = function (data) {
     .catch(ui.newGameFailure)
 }
 
+const onGetGames = function () {
+  api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.getGamesFailure)
+}
+
 const addHandlers = function () {
   $('.box').on('click', onClick)
   $('create').on('click', newGame)
+  $('#getGames').on('click', onGetGames)
 }
 
 module.exports = {

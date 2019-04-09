@@ -11,37 +11,33 @@ const newGame = function () {
   })
 }
 
-// const getGames = function () {
-//   return $.ajax({
-//     url: config.apiUrl + '/games?over=true',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-//
-// const updateGame = function (index, value, boolean) {
-//   return $.ajax({
-//     url: config.apiUrl + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: {
-//       game: {
-//         cell: {
-//           index: index,
-//           value: value
-//         },
-//         over: boolean
-//       }
-//     }
-//   })
-// }
+const getGames = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
+
+const updateGame = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.gameId,
+    method: 'PATCH',
+    headers: {authorization: 'Token token=' + store.user.token},
+    data: {
+      'game': {
+        'cell': {
+          'index': store.index,
+          'value': store.value
+        },
+        'over': store.gameOver
+      }
+    }
+  })
+}
 
 module.exports = {
-  newGame
-  // getGames,
-  // updateGame
+  newGame,
+  getGames,
+  updateGame
 }
