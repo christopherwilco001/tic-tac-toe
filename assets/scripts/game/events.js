@@ -13,7 +13,6 @@ let playerTurn = 'X'
 
 let gameOver = false
 
-
 // const clearBoard = function () {
 //   for (let i = 0; i < gameBoard.length; i++) {
 //     gameBoard[i] = ' '
@@ -30,9 +29,9 @@ const winConditions = function (gameBoard, playerTurn) {
 (gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7] && gameBoard[1] !== '') ||
 (gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8] && gameBoard[2] !== '')) {
     $('#message').text('player ' + playerTurn + ' wins')
-  } else if (gameBoard.every(index => index !== '')) {
+  // } else if (gameBoard.every(index => index !== '')) {
     // gameOver = true
-    $('message').text('Draw')
+    // $('message').text('Draw')
   }
 }
 
@@ -92,17 +91,18 @@ const onClick = function (event) {
 //
 //
 
-const newGame = function (data) {
+const newGame = function (event) {
+  event.preventDefault()
   gameBoard = ['', '', '', '', '', '', '', '', '']
   playerTurn = 'X'
   gameOver = false
 
-  api.newGame(newGame)
-    .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
+  api.newGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
 }
 
-const onGetGames = function () {
+const getGames = function () {
   api.getGames()
     .then(ui.getGamesSuccess)
     .catch(ui.getGamesFailure)
@@ -110,8 +110,8 @@ const onGetGames = function () {
 
 const addHandlers = function () {
   $('.box').on('click', onClick)
-  $('create').on('click', newGame)
-  $('#getGames').on('click', onGetGames)
+  $('#create').on('submit', newGame)
+  $('.stats').on('click', getGames)
 }
 
 module.exports = {

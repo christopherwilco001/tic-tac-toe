@@ -14,7 +14,7 @@ const signUpFailure = function (data) {
 
 const signInSuccess = function (data) {
   store.user = data.user
-  $('.sign-up-sign-in-div').hide()
+  $('.sign-up').hide()
   $('.container').hide()
   $('.stats').show()
   $('#change-password').show()
