@@ -14,7 +14,6 @@ const newGame = function () {
 }
 
 const getGames = function () {
-  console.log(store)
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'GET',

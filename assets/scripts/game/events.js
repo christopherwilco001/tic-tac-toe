@@ -81,13 +81,13 @@ const onClick = function (event) {
 // for (let i = 0; i < board.length; i++) {
 //   if (board[i]) {
 //   }
-//   // console.log('Win')
+
 // }
 
 // if (board[0] === board[1] && board[1] === board[2] === 'X')
 
 // if (playerWin === true) {
-//   console.log('current player wins!')
+
 //
 //
 
