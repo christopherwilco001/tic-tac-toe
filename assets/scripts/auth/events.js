@@ -30,8 +30,8 @@ const changePassword = function (event) {
   const data = getFormFields(event.target)
 
   api.changePassword(data)
-    .then()
-    .catch()
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordSuccess)
 }
 
 const onSignOut = function (event) {

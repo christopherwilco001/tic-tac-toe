@@ -13,9 +13,10 @@ let playerTurn = 'X'
 
 let gameOver = false
 
-// const clearBoard = function () {
-//   for (let i = 0; i < gameBoard.length; i++) {
-//     gameBoard[i] = ' '
+// turn off clicking for winner
+// const finishedGame = function () {
+//   if (gameOver === true) {
+//     $('.container').hide()
 //   }
 // }
 
@@ -29,9 +30,9 @@ const winConditions = function (gameBoard, playerTurn) {
 (gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7] && gameBoard[1] !== '') ||
 (gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8] && gameBoard[2] !== '')) {
     $('#message').text('player ' + playerTurn + ' wins')
-  // } else if (gameBoard.every(index => index !== '')) {
-    // gameOver = true
-    // $('message').text('Draw')
+  } else if (gameBoard.every(index => index !== '')) {
+    gameOver = true
+    $('message').text('Draw!')
   }
 }
 
@@ -103,6 +104,7 @@ const newGame = function (event) {
 }
 
 const getGames = function () {
+  event.preventDefault()
   api.getGames()
     .then(ui.getGamesSuccess)
     .catch(ui.getGamesFailure)
