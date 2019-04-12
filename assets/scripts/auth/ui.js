@@ -41,6 +41,7 @@ const signInSuccess = function (data) {
   // $('.container').show()
   // shows sign-out button
   $('#sign-out').show()
+  $('.stats').show()
   // resetting the form
   $('form').trigger('reset')
 }
@@ -71,30 +72,7 @@ const changePasswordFailure = function (data) {
 }
 
 const signOutSuccess = function () {
-  // resets the form
-  // $('form').trigger('reset')
-  // // show sign out message
-  // $('.sign-out-container').show()
-  // // sign out message
-  // $('.sign-out-container').text('Signed out successfully!')
-  // // hides sign out message
-  // $('.sign-out-container').hide(4000)
-  // // hides change password
-  // $('#change-password').hide()
-  // // shows sign up and sign in form
-  // $('#sign-in').show()
-  // $('#sign-up').show()
-  // // hides sign out
-  // $('#sign-out').hide()
-  // // hides the board
-  // $('.container').hide()
-  // // hides the number of games played on sign out
-  // // $('#numberOfGames').hide()
-  // // hides password change
-  // $('#change-password').hide()
-  // // hides messagebox
-  // // $('.mess').hide()
-  // store.user = null
+
 }
 
 const signOutFailure = function () {

@@ -13,12 +13,6 @@ let playerTurn = 'X'
 
 let gameOver = false
 
-// turn off clicking for winner
-// const finishedGame = function () {
-//   if (gameOver === true) {
-//     $('.container').hide()
-//   }
-// }
 
 const winConditions = function (gameBoard, playerTurn) {
   if ((gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2] && gameBoard[0] !== '') ||
@@ -36,12 +30,11 @@ const winConditions = function (gameBoard, playerTurn) {
   }
 }
 
-// //   [0, 1, 2], [3, 4, 5],
-// //   [6, 7, 8], [0, 3, 6],
-// //   [1, 4, 7], [2, 5, 8],
-// //   [0, 4, 8], [6, 4, 2]
-// // ]
-// //
+// const endGame = function () {
+//   if (gameOver === true) {
+//
+//   }
+// }
 
 const onClick = function (event) {
   const currentBox = $(event.target).data('id')
@@ -60,37 +53,7 @@ const onClick = function (event) {
   }
 }
 
-// const winConditions = [
-//   [$('#zero').text(), $('#one').text(), $('#two').text()],
-//   // row 1
-//   [$('#three').text(), $('#four').text(), $('#five').text()],
-//   // row 2
-//   [$('#six').text(), $('#seven').text(), $('#eight').text()],
-//   // row 3
-//   [$('#zero').text(), $('#three').text(), $('#six').text()],
-//   // col 1
-//   [$('#one').text(), $('#four').text(), $('#seven').text()],
-//   // col 2
-//   [$('#two').text(), $('#five').text(), $('#eight').text()],
-//   // col 3
-//   [$('#zero').text(), $('#four').text(), $('#eight').text()],
-//   // diag 1
-//   [$('#two').text(), $('#four').text(), $('#six').text()]
-//   // diag 2
-// ]
 
-// for (let i = 0; i < board.length; i++) {
-//   if (board[i]) {
-//   }
-
-// }
-
-// if (board[0] === board[1] && board[1] === board[2] === 'X')
-
-// if (playerWin === true) {
-
-//
-//
 
 const newGame = function (event) {
   event.preventDefault()
@@ -113,12 +76,11 @@ const getGames = function () {
 const addHandlers = function () {
   $('.box').on('click', onClick)
   $('#create').on('submit', newGame)
-  $('.stats').on('click', getGames)
+  $('.stats').on('submit', getGames)
 }
 
 module.exports = {
   addHandlers,
   gameOver,
-  // clearBoard,
   winConditions
 }

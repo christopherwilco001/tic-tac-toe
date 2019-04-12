@@ -1,27 +1,50 @@
 @import '~bootstrap/scss/bootstrap';
 
 h1 {
-  display: none;
   font-style: italic;
   padding: 20px 50px;
   text-align: center;
+}
+
+body {
+  background-color: #7FB3D5;
 }
 
 .stats, .container {
   display: none;
 }
 
+#getGames {
+  text-align: center;
+  padding: 20px 50px;
+}
+
+.sign-up-container {
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.sign-in-container {
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 15px;
+}
+
 #change-password {
   display: none;
+  padding: 20px 50px;
   text-align: center;
 }
 
 #sign-out {
   display: none;
+  padding: 20px 50px;
   text-align: center;
 }
 
 #create {
+  padding: 20px 50px;
   text-align: center;
 }
 
