@@ -18,7 +18,6 @@ const signUpFailure = function (data) {
 }
 
 const signInSuccess = function (data) {
-  // storing user data to the store
   setTimeout(function () {
     $('#message').text('')
   }, 1000)
@@ -39,22 +38,22 @@ const signInFailure = function (data) {
   $('form').trigger('reset')
 }
 
-const changePasswordSuccess = function (data) {
+const changePasswordSuccess = function () {
   setTimeout(function () {
     $('#message').text('')
   }, 1200)
   $('#change-password').show()
+  $('.container').show()
   $('#message').text('You changed your password successfully!')
   $('form').trigger('reset')
-  store.user = data.user
 }
 
 const changePasswordFailure = function (data) {
-  $('#change-password').show()
-  $('#change-password').text('Something went wrong try again.')
   setTimeout(function () {
     $('#change-password').text('')
   }, 1200)
+  $('#change-password').show()
+  $('#change-password').text('Something went wrong try again.')
   $('form').trigger('reset')
 }
 
@@ -65,17 +64,17 @@ const signOutSuccess = function (data) {
   $('#sign-up').show(1200)
   $('#sign-in').show(1200)
   $('#sign-out').hide()
-  store.user = null
   $('#message').text('Sign out successful!')
   $('#change-password').hide()
   $('.container').hide()
   $('.stats').hide()
   $('#create').hide()
+  store.user = null
   $('form').trigger('reset')
 }
 
 const signOutFailure = function () {
-  $('#sign-out').text('Sign out failed, try again.')
+  $('#sign-out').text('Sign out failed, try again!')
   $('form').trigger('reset')
 }
 

@@ -39,23 +39,22 @@ const winConditions = function (gameBoard, playerTurn) {
 const endGame = function () {
   if (gameOver === true) {
     // $('.container').hide()
-    $('#message').hide()
+    $('#message').text('')
     playerTurn = 'X'
   }
 }
 
 const newGame = function (event) {
   event.preventDefault()
+  api.newGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
   $('.box').text('')
-  // $('#endMessage').text('')
+  $('#endMessage').text('')
   gameBoard = ['', '', '', '', '', '', '', '', '']
   playerTurn = 'O'
   gameOver = false
   turn()
-
-  api.newGame()
-    .then(ui.createGameSuccess)
-    .catch(ui.createGameFailure)
 }
 
 const getGames = function () {
