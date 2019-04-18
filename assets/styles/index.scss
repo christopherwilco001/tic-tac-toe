@@ -14,19 +14,27 @@ body {
   display: none;
 }
 
+#endMessage {
+  text-align: center;
+}
+
+#message {
+  text-align: center;
+}
+
 #getGames {
   text-align: center;
-  padding: 20px 50px;
+  padding: 10px 30px;
 }
 
 .sign-up-container {
-  padding: 20px 50px;
+  padding: 10px 30px;
   text-align: center;
   font-size: 15px;
 }
 
 .sign-in-container {
-  padding: 20px 50px;
+  padding: 10px 30px;
   text-align: center;
   font-size: 15px;
 }
@@ -39,12 +47,13 @@ body {
 
 #sign-out {
   display: none;
-  padding: 20px 50px;
+  padding: 10px 30px;
   text-align: center;
 }
 
 #create {
-  padding: 20px 50px;
+  display: none;
+  padding: 10px 30px;
   text-align: center;
 }
 

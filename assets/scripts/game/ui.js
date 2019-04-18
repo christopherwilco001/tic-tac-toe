@@ -7,7 +7,7 @@ const getGamesSuccess = function (games) {
   $('.stats').text('Total Games Played: ' + numberOfGamesPlayed)
   setTimeout(function () {
     $('#stats-display').text('')
-  }, 5000
+  }, 12000
   )
 }
 
@@ -30,11 +30,10 @@ const createGameFailure = function () {
   $('#message').text('Something went wrong. Try again')
 }
 
-const updateSuccess = function (game) {
+const updateSuccess = function (data) {
 }
 
 const updateFailure = function () {
-  $('#message').text('Something went wrong. Try again')
 }
 
 module.exports = {

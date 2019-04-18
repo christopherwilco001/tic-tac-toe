@@ -10,7 +10,7 @@ const newGame = function (data) {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {}
+    data: '{}'
   })
 }
 
@@ -21,24 +21,24 @@ const getGames = function () {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {}
+    data: '{}'
   })
 }
 
-const updateGame = function () {
+const updateGame = function (index, value, over) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + store.gameId,
+    url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     data: {
-      'game': {
-        'cell': {
-          'index': store.index,
-          'value': store.value
+      game: {
+        cell: {
+          index: index,
+          value: value
         },
-        'over': store.gameOver
+        over: over
       }
     }
   })
