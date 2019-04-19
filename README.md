@@ -33,6 +33,10 @@ At the landing page, new users will be given the opportunity to sign up with an 
 - JavaScript
 - JQuery
 
+### Wireframe
+
+https://imgur.com/v1EhXvj
+
 ### Unsolved Issues
 
 None all requirements had to be met.
