@@ -53,7 +53,8 @@ const changePasswordSuccess = function () {
     $('#message').text('')
   }, 2000)
   $('#change-password').show()
-  $('#message').text('You changed your password successfully!')
+  $('#message').text('You changed your password successfully')
+  $('#message').show()
   $('.container').hide(500)
   $('form').trigger('reset')
 }
