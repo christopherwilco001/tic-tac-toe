@@ -46,6 +46,7 @@ const endGame = function () {
       $('#endMessage').text('')
     }, 2000)
     $('#message').hide()
+    $('#endMessage').show()
     playerTurn = 'X'
   }
 }
