@@ -40,7 +40,10 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function (data) {
-  $('#sign-in').show(2000)
+  setTimeout(function () {
+    $('#message').text('')
+  }, 2000)
+  $('#sign-in').show()
   $('#message').text('Oops, Sign in failed.')
   $('form').trigger('reset')
 }

@@ -42,7 +42,6 @@ const winConditions = function (gameBoard, playerTurn) {
 const endGame = function () {
   if (gameOver === true) {
     $('.container').hide(1000)
-    $('#message').hide('')
     playerTurn = 'X'
   }
 }
