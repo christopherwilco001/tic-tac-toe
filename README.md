@@ -35,4 +35,4 @@ At the landing page, new users will be given the opportunity to sign up with an 
 
 ### Unsolved Issues
 
-None.
+None all requirements had to be met.
