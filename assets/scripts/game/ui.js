@@ -9,6 +9,7 @@ const getGamesSuccess = function (games) {
   }, 2000)
   $('#message').text('Total Games Played: ' + numberOfGamesPlayed)
   $('#getGames').show()
+  $('#message').show()
 }
 
 const getGamesFailure = function (data) {

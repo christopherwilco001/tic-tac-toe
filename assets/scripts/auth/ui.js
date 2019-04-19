@@ -64,6 +64,7 @@ const changePasswordFailure = function (data) {
   }, 2000)
   $('#change-password').show()
   $('#message').text('Something went went wrong, try again.')
+  $('#message').show()
   $('form').trigger('reset')
 }
 
