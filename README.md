@@ -2,9 +2,13 @@
 
 Welcome to tic-tac-toe, my first application as a Developer. This README will give you insight into the development process.
 
+### Wireframe
+
+https://imgur.com/v1EhXvj
+
 ### Application functionality
 
-At the landing page, new users will be given the opportunity to sign up with an email and password. Existing users will able to log back in with their credentials. After sign in, users will be able to click New Game to start a game immediately. Users will be able to track how many games have been played and change their password, or sign out. After clicking the start New Game button, an AJAX request is made to the API creating a new game object, and the gameboard appears, with a display at the top showing whose turn it is. Players click the board to make their choice. Each click, an AJAX request is made to the API, updating an array that represents each selection made on the game board. Players take turns until the game is won with 3 in a row, or if there is a tie. At any point, users can click the New Game button to reset the game board and start a new game.
+At the landing page, new users will be given the opportunity to sign up with an email and password. Existing users will able to log back in with their existing credentials. After sign in, users will be able to click "New Game" to start a game. Users will be able to track how many games have been played and change their password, or sign out. After clicking the start "New Game" button, an AJAX request is made to the API creating a new game object, and the gameboard appears, with a display at the top showing whose turn it is. Players click on the board to make their choice. Each click, an AJAX request is made to the API, updating an array that represents each selection made on the game board. Players take turns until the game is won with 3 in a row, or if there is a tie. At any point, users can click the New Game button to reset the game board and start a new game.
 
 ### Development Process
 
@@ -32,10 +36,6 @@ At the landing page, new users will be given the opportunity to sign up with an 
 - HTML
 - JavaScript
 - JQuery
-
-### Wireframe
-
-https://imgur.com/v1EhXvj
 
 ### Unsolved Issues
 
