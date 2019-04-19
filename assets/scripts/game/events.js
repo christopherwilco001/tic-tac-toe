@@ -10,6 +10,10 @@ let gameBoard = ['', '', '', '', '', '', '', '', '']
 // player turn
 
 let playerTurn = 'X'
+
+let gameOver = false
+
+// Switch player function.
 const turn = function () {
   if (playerTurn === 'X') {
     playerTurn = 'O'
@@ -17,8 +21,7 @@ const turn = function () {
   $('#message').text(`${playerTurn}, it's your turn!`)
 }
 
-let gameOver = false
-
+// Game winning combinations.
 const winConditions = function (gameBoard, playerTurn) {
   if ((gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2] && gameBoard[0] === playerTurn) ||
 (gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5] && gameBoard[3] === playerTurn) ||
@@ -32,14 +35,14 @@ const winConditions = function (gameBoard, playerTurn) {
     $('#endMessage').text(`${playerTurn} wins!`)
   } else if (gameBoard.every(index => index !== '')) {
     gameOver = true
-    $('endMessage').text('Draw!')
+    $('#endMessage').text('Draw!')
   }
 }
 
 const endGame = function () {
   if (gameOver === true) {
-    // $('.container').hide()
-    $('#message').text('')
+    $('.container').hide(1000)
+    $('#message').hide('')
     playerTurn = 'X'
   }
 }
@@ -82,7 +85,7 @@ const onClick = function (event) {
     endGame()
     turn()
   } else if (emptyBox !== '') {
-    $('#message').text('You can not do that.')
+    $('#message').text('Invalid move, try again.')
   }
 }
 
@@ -93,6 +96,5 @@ const addHandlers = function () {
 }
 
 module.exports = {
-  addHandlers,
-  onClick
+  addHandlers
 }

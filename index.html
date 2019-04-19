@@ -16,33 +16,38 @@
       <div class="sign-up-container">
         <form id="sign-up">
           <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="text" name="credentials[password]" placeholder="Password">
-          <input type="text" name="credentials[password_confirmation]" placeholder="Password Confirmation" >
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" >
           <input type="submit" value="Sign Up!">
         </form>
       </div>
 
       <div class="sign-in-container">
         <form id="sign-in">
-          <input type="text" name="credentials[email]" placeholder="Email">
-          <input type="text" name="credentials[password]" placeholder="Password">
+          <input type="email" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
           <input type="submit" value="Sign In!">
         </form>
       </div>
 
-<form id="create">
-    <input type="submit" value="New Game">
-</form>
+<div class="new-game-container">
+  <form id="create">
+      <input type="submit" value="New Game">
+  </form>
+</div>
 
-<form id="sign-out">
-    <input type="submit" value="Sign Out">
-</form>
+<div class="sign-out-container">
+  <form id="sign-out">
+      <input type="submit" value="Sign Out">
+  </form>
+</div>
 
 <!--STATISTICS-->
+
 <div class="stats">
   <form id="getGames">
-  <input type="submit" Value="Games">
-</form>
+    <input type="submit" Value="Games">
+  </form>
 </div>
 
 
@@ -74,5 +79,8 @@
             <input type="password" name="passwords[new]" placeholder="New password">
             <input type="submit" value="Change Password">
           </form>
+          <footer>
+            <p> Created by: Christoper Wilcox </p>
+          </footer>
         </body>
       </html>
