@@ -54,6 +54,7 @@ const changePasswordSuccess = function () {
   }, 2000)
   $('#change-password').show()
   $('#message').text('You changed your password successfully!')
+  $('.container').hide(500)
   $('form').trigger('reset')
 }
 
