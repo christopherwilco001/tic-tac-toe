@@ -39,4 +39,4 @@ At the landing page, new users will be given the opportunity to sign up with an 
 
 ### Unsolved Issues
 
-None all requirements had to be met.
+All requirements were met so the main problems were solved. I did have issues attempting figure out how you would choose a differnt starting letter, 'O' vs 'X'.
