@@ -44,7 +44,7 @@ const signInFailure = function (data) {
     $('#message').text('')
   }, 2000)
   $('#sign-in').show()
-  $('#message').text('Oops, Sign in failed.')
+  $('#message').text('Oops, something went wrong. Try again!')
   $('form').trigger('reset')
 }
 
@@ -75,6 +75,8 @@ const signOutSuccess = function (data) {
   $('#sign-in').show(1200)
   $('#sign-out').hide()
   $('#message').text('Sign out successful!')
+  $('#message').show()
+  $('#endMessage').hide()
   $('#change-password').hide()
   $('.container').hide()
   $('.stats').hide()

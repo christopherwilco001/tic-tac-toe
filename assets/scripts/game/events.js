@@ -42,6 +42,10 @@ const winConditions = function (gameBoard, playerTurn) {
 const endGame = function () {
   if (gameOver === true) {
     $('.container').hide(1000)
+    setTimeout(function () {
+      $('#endMessage').text('')
+    }, 2000)
+    $('#message').hide()
     playerTurn = 'X'
   }
 }
@@ -53,6 +57,7 @@ const newGame = function (event) {
     .catch(ui.createGameFailure)
   $('.box').text('')
   $('#endMessage').text('')
+  $('#message').show()
   gameBoard = ['', '', '', '', '', '', '', '', '']
   playerTurn = 'O'
   gameOver = false
