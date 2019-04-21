@@ -39,6 +39,7 @@ const winConditions = function (gameBoard, playerTurn) {
   }
 }
 
+// end game function and what happens at the end of a game with messages
 const endGame = function () {
   if (gameOver === true) {
     $('.container').hide(1000)
@@ -51,6 +52,7 @@ const endGame = function () {
   }
 }
 
+// new game function and message after clicking new game.
 const newGame = function (event) {
   event.preventDefault()
   api.newGame()
@@ -72,6 +74,7 @@ const getGames = function () {
     .catch(ui.getGamesFailure)
 }
 
+// click function, when clicking on each empty box or filled box.
 const onClick = function (event) {
   const currentBox = $(event.target).data('id')
   const emptyBox = $(event.target).text()
